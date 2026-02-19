@@ -45,6 +45,13 @@ function App() {
       setResult(String(Number(result)-1))
     )
   }
+
+  function calculate(){
+    let l = result.at(-1)
+    if (l!=undefined && l>='0' && l<='9'){
+      setResult(String(eval(result)))
+    }
+  }
   return (
     <>
       <div className='calculator'>
@@ -73,7 +80,9 @@ function App() {
             >×</button>
           <button onClick={()=>addNumber('0')}>0</button>
           <button onClick={()=>addOperand('.')}>,</button>
-          <button className="equals">=</button>
+          <button 
+            className="equals"
+            onClick={calculate}>=</button>
           <button 
             className="operator"
             onClick={()=>addOperand('/')}>÷</button>
@@ -87,6 +96,7 @@ function App() {
             className="increment"
             onClick={dec}
           >-1</button>
+
         </div>
       </div>
     </>
