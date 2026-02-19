@@ -21,6 +21,30 @@ function App() {
       setResult(result+s)
     }
   }
+
+  function clearOneSymbol(){
+    if (result.length > 1){
+      setResult(result.slice(0, -1))
+    }else{
+      setResult('0')
+    }
+  }
+
+  function inc(){
+    if (isNaN(Number(result))){
+      setResult(result+'+1')
+    }else(
+      setResult(String(Number(result)+1))
+    )
+  }
+
+   function dec(){
+    if (isNaN(Number(result))){
+      setResult(result+'-1')
+    }else(
+      setResult(String(Number(result)-1))
+    )
+  }
   return (
     <>
       <div className='calculator'>
@@ -48,20 +72,20 @@ function App() {
             onClick={()=>addOperand('*')}
             >×</button>
           <button onClick={()=>addNumber('0')}>0</button>
-          <button>,</button>
+          <button onClick={()=>addOperand('.')}>,</button>
           <button className="equals">=</button>
           <button 
             className="operator"
             onClick={()=>addOperand('/')}>÷</button>
           <button className="clear" onClick={()=>setResult('0')}>C</button>
-          <button className="clear" >&#9003;</button>
+          <button className="clear" onClick={clearOneSymbol} >&#9003;</button>
           <button 
             className="increment"
-            onClick={()=>setResult((prev: string)=>String(Number(prev)+1))}
+            onClick={inc}
             >+1</button>
           <button 
             className="increment"
-            onClick={()=>setResult((prev:string)=>String(Number(prev)-1))}
+            onClick={dec}
           >-1</button>
         </div>
       </div>
