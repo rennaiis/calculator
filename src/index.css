@@ -53,22 +53,6 @@ button {
 button:hover{
     background-color: #191722
 }
-.increment-buttons{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.increment{
-    width: 48%;
-    padding: 10px;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
 
 .operator {
   background-color: #4c145a;
@@ -79,17 +63,25 @@ button:hover{
 }
 
 .equals {
-  background-color: #1ecfa3;
+  background-color: #20b18c;
 }
 
 .equals:hover {
   background-color: #095050;
 }
 
-.clear {
-  background-color: #d1584b;
+.clear{
+    background-color: #d1584b;
 }
 
-.clear:hover {
-  background-color: #611e17;
+.clear:hover{
+    background-color: #531f19;
+}
+
+.increment{
+    background-color: #2e4aa7;
+}
+
+.increment:hover{
+    background-color: #0e1135;
 }

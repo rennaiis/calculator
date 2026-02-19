@@ -25,10 +25,8 @@ function App() {
           <button>,</button>
           <button className="equals">=</button>
           <button className="operator">÷</button>
-          <button className="clear-all">C</button>
+          <button className="clear">C</button>
           <button className="clear">&#9003;</button>
-        </div>
-        <div className="increment-buttons">
           <button className="increment">+1</button>
           <button className="increment">-1</button>
         </div>
