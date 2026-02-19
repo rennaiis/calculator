@@ -3,10 +3,11 @@ import { useState } from 'react'
 import './index.css'
 
 function App() {
+  const [result, setResult] = useState(0)
   return (
     <>
       <div className='calculator'>
-        <div className='display'>s</div>
+        <div className='display'>{result}</div>
         <div className='buttons'></div>
         <div className='buttons'>
           <button>1</button>
@@ -27,8 +28,14 @@ function App() {
           <button className="operator">÷</button>
           <button className="clear">C</button>
           <button className="clear">&#9003;</button>
-          <button className="increment">+1</button>
-          <button className="increment">-1</button>
+          <button 
+            className="increment"
+            onClick={()=>setResult((prev: number)=>prev+1)}
+            >+1</button>
+          <button 
+            className="increment"
+            onClick={()=>setResult((prev:number)=>prev-1)}
+          >-1</button>
         </div>
       </div>
     </>
