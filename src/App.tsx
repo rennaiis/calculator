@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <div className='calculator'>
-        <div className='display'></div>
+        <div className='display'>s</div>
         <div className='buttons'></div>
         <div className='buttons'>
           <button>1</button>
@@ -25,11 +25,12 @@ function App() {
           <button>,</button>
           <button className="equals">=</button>
           <button className="operator">÷</button>
-          <button className="clear">C</button>
-          <div className="increment-buttons">
-          <button className="increment">+1</button>
-          <button className="decrement">-1</button>
+          <button className="clear-all">C</button>
+          <button className="clear">&#9003;</button>
         </div>
+        <div className="increment-buttons">
+          <button className="increment">+1</button>
+          <button className="increment">-1</button>
         </div>
       </div>
     </>
