@@ -7,9 +7,10 @@ function App() {
   const [result, setResult] = useState('0')
     
   function addNumber(s: string){
+    let l = result.at(-1)
     if (result.charAt(0)=='0'){
       setResult(s)
-    }else{
+    }else if (!(Boolean(l)!=false && isNaN(Number(l))&& s=='0')){
       setResult(result + s)
     }
   }
@@ -53,7 +54,7 @@ function App() {
             className="operator"
             onClick={()=>addOperand('/')}>÷</button>
           <button className="clear" onClick={()=>setResult('0')}>C</button>
-          <button className="clear">&#9003;</button>
+          <button className="clear" >&#9003;</button>
           <button 
             className="increment"
             onClick={()=>setResult((prev: string)=>String(Number(prev)+1))}
